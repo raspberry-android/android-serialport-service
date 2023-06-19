@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vendor.labworks.serialportservice"
+    android:sharedUserId="android.uid.system" >
+    <application android:name=".SerialPortService"
+        android:persistent="true" >
+    </application>
+    <permission
+        android:name="vendor.labworks.serialportservice.permission.SERIALPORT"
+        android:protectionLevel="normal" />
+</manifest>

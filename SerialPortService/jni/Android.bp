@@ -1,0 +1,11 @@
+cc_library_shared {
+    name: "libjni_serialportservice",
+    srcs: [ "*.cpp" ],
+    header_libs: [ "jni_headers" ],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "vendor.labworks.serialport-ndk",
+    ],
+    system_ext_specific: true,
+}
