@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<permissions>
-    <library name="vendor.labworks.serialportmanager"
-            file="/system_ext/framework/vendor.labworks.serialportmanager.jar"/>
-</permissions>

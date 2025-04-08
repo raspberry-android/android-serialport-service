@@ -1,16 +1,16 @@
 java_library {
-    name: "vendor.labworks.serialportmanager",
+    name: "vendor.raspdroid.serialportmanager",
     srcs: [ "src/**/*.java" ],
-    static_libs: [ "vendor.labworks.serialportservice" ],
-    required: [ "vendor.labworks.serialportmanager.xml" ],
+    static_libs: [ "vendor.raspdroid.serialportservice" ],
+    required: [ "vendor.raspdroid.serialportmanager.xml" ],
     system_ext_specific: true,
     platform_apis: true,
     installable: true,
 }
 
 prebuilt_etc {
-    name: "vendor.labworks.serialportmanager.xml",
-    src: "vendor.labworks.serialportmanager.xml",
+    name: "vendor.raspdroid.serialportmanager.xml",
+    src: "vendor.raspdroid.serialportmanager.xml",
     system_ext_specific: true,
     sub_dir: "permissions",
 }

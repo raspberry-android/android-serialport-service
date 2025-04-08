@@ -2,7 +2,7 @@ android_app {
     name: "SerialPortService",
     srcs: [ "src/**/*.java" ],
     jni_libs: [ "libjni_serialportservice" ],
-    static_libs: [ "vendor.labworks.serialportservice" ],
+    static_libs: [ "vendor.raspdroid.serialportservice" ],
     optimize: {
         enabled: false
     },
@@ -13,7 +13,7 @@ android_app {
 }
 
 java_library_static {
-    name: "vendor.labworks.serialportservice",
-    srcs: [ "src/vendor/labworks/serialportservice/ISerialPortService.aidl" ],
+    name: "vendor.raspdroid.serialportservice",
+    srcs: [ "src/vendor/raspdroid/serialportservice/ISerialPortService.aidl" ],
     system_ext_specific: true,
 }

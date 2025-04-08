@@ -1,4 +1,4 @@
-#include <aidl/vendor/labworks/serialport/ISerialPort.h>
+#include <aidl/vendor/raspdroid/serialport/ISerialPort.h>
 #include <android/binder_manager.h>
 #include <jni.h>
 
@@ -6,12 +6,12 @@
 extern "C" {
 #endif
 
-using aidl::vendor::labworks::serialport::ISerialPort;
+using aidl::vendor::raspdroid::serialport::ISerialPort;
 
 static std::shared_ptr<ISerialPort> serialport = nullptr;
 
 JNIEXPORT void JNICALL
-  Java_vendor_labworks_serialportservice_SerialPortServiceImpl_nativeTx
+  Java_vendor_raspdroid_serialportservice_SerialPortServiceImpl_nativeTx
   (JNIEnv *, jclass, jbyte data) {
     if (serialport == nullptr) {
         const std::string instance = std::string() + ISerialPort::descriptor + "/default";
@@ -21,7 +21,7 @@ JNIEXPORT void JNICALL
 }
 
 JNIEXPORT jbyte JNICALL
-  Java_vendor_labworks_serialportservice_SerialPortServiceImpl_nativeRx
+  Java_vendor_raspdroid_serialportservice_SerialPortServiceImpl_nativeRx
   (JNIEnv *, jclass) {
     if (serialport == nullptr) {
         const std::string instance = std::string() + ISerialPort::descriptor + "/default";
